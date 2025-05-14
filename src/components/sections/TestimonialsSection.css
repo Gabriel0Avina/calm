@@ -1,0 +1,208 @@
+.testimonials-section {
+  background-color: #f5faff;
+  padding: var(--space-2xl) 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.testimonials-carousel {
+  margin-top: var(--space-xl);
+  padding: 0 var(--space-md);
+}
+
+/*
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-lg);
+  margin-bottom: var(--space-xl);
+}
+*/
+
+.testimonial-card {
+  background-color: white;
+  border-radius: var(--border-radius-md);
+  padding: var(--space-lg);
+  box-shadow: var(--shadow-sm);
+  position: relative;
+  transition: var(--transition-medium);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-md);
+}
+
+.quote-mark {
+  font-size: 4rem;
+  position: absolute;
+  top: -15px;
+  left: 15px;
+  color: rgba(45, 126, 203, 0.1);
+  font-family: serif;
+  font-weight: bold;
+}
+
+.testimonial-quote {
+  margin-bottom: var(--space-md);
+  color: var(--color-text);
+  font-size: var(--font-size-md);
+  line-height: 1.6;
+  position: relative;
+  z-index: 1;
+  flex-grow: 1;
+}
+
+.testimonial-rating {
+  margin-bottom: var(--space-md);
+  display: flex;
+}
+
+.star {
+  color: #ffb400;
+  font-size: var(--font-size-md);
+  margin-right: 2px;
+}
+
+.testimonial-author {
+  display: flex;
+  align-items: center;
+  margin-top: auto;
+}
+
+.author-avatar {
+  margin-right: var(--space-sm);
+}
+
+.avatar-placeholder {
+  width: 40px;
+  height: 40px;
+  background-color: var(--color-primary);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: var(--font-size-md);
+}
+
+.author-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.author-name {
+  font-weight: 600;
+  font-size: var(--font-size-sm);
+  color: var(--color-text);
+  margin-bottom: 0;
+}
+
+.author-role {
+  font-size: var(--font-size-xs);
+  color: var(--color-text-light);
+  margin-bottom: 0;
+}
+
+/* Estadísticas */
+.testimonials-stats {
+  display: flex;
+  justify-content: space-around;
+  margin-top: var(--space-2xl);
+  padding: var(--space-lg) 0;
+  background-color: white;
+  border-radius: var(--border-radius-md);
+  box-shadow: var(--shadow-sm);
+}
+
+.stat-item {
+  text-align: center;
+}
+
+.stat-number {
+  font-size: var(--font-size-3xl);
+  font-weight: 700;
+  color: var(--color-primary);
+  margin-bottom: var(--space-xs);
+}
+
+.stat-label {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-light);
+}
+
+/* Responsive */
+/*
+@media (max-width: 1200px) {
+  .testimonials-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .testimonials-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-md);
+  }
+  
+  .testimonials-stats {
+    flex-direction: column;
+    gap: var(--space-lg);
+  }
+  
+  .stat-item {
+    margin-bottom: var(--space-md);
+  }
+}
+*/
+
+/* Swiper Custom Styles */
+.testimonials-swiper .swiper-slide {
+  height: auto; /* Allow slide to grow with card content */
+  display: flex;
+  padding-bottom: 50px; /* Space for pagination */
+}
+
+.testimonials-swiper .testimonial-card {
+  width: 100%; /* Make card take full width of slide */
+  margin-bottom: 0;
+  /* Ensure it aligns well if using display:flex on swiper-slide */
+  display: flex;
+  flex-direction: column;
+}
+
+/* Custom Swiper Navigation Arrows */
+.testimonials-swiper .swiper-button-next,
+.testimonials-swiper .swiper-button-prev {
+  color: var(--color-primary, #2d7ecb);
+  top: 50%; /* Adjust vertical position if needed */
+  transform: translateY(-100%); /* Adjust based on padding-bottom of swiper-slide */
+}
+
+.testimonials-swiper .swiper-button-next::after,
+.testimonials-swiper .swiper-button-prev::after {
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+/* Custom Swiper Pagination Dots */
+.testimonials-swiper .swiper-pagination {
+  bottom: 10px !important; /* Ensure pagination is visible with padding-bottom */
+}
+
+.testimonials-swiper .swiper-pagination-bullet {
+  background-color: var(--color-primary-light, #a0c7e8);
+  opacity: 0.8;
+  width: 10px;
+  height: 10px;
+  transition: background-color 0.3s ease, opacity 0.3s ease;
+}
+
+.testimonials-swiper .swiper-pagination-bullet-active {
+  background-color: var(--color-primary, #2d7ecb);
+  opacity: 1;
+}
